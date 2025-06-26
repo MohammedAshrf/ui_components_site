@@ -1,42 +1,79 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-primary: #00bfff;
+  --color-secondary: #8a9eff;
+  --color-background: #000c15;
+  --color-card-bg: #081e2c;
+  --color-text: #ffffff;
+  --color-muted-text: #cccccc;
+  --color-hover: #1a88d0;
+  --color-highlight: #00bfff;
+  --color-border: #1e2c3a;
+  --font-family: 'Cairo', sans-serif;
+  --heading-font-size: 32px;
+  --subheading-font-size: 18px;
+  --card-padding: 20px;
+  --section-spacing: 60px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@import '@fontsource/cairo';
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.5em;
 }
 
 a {
-  color: inherit;
+  color: var(--color-text);
   text-decoration: none;
+  transition: color 0.2s;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+section {
+  padding: var(--section-spacing) 0;
+}
+
+.card {
+  background: var(--color-card-bg);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.1);
+  padding: var(--card-padding);
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 191, 255, 0.2);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--color-background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-card-bg);
+  border-radius: 8px;
 }

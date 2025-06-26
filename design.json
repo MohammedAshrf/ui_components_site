@@ -1,0 +1,88 @@
+{
+  "colors": {
+    "primary": "#00BFFF",
+    "secondary": "#8A9EFF",
+    "background": "#000C15",
+    "cardBackground": "#081E2C",
+    "text": "#FFFFFF",
+    "mutedText": "#CCCCCC",
+    "hover": "#1A88D0",
+    "highlight": "#00BFFF",
+    "border": "#1E2C3A"
+  },
+  "typography": {
+    "fontFamily": "Cairo, sans-serif",
+    "fontWeight": "500-700",
+    "headingFontSize": "32px",
+    "subheadingFontSize": "18px",
+    "textAlign": "center"
+  },
+  "spacing": {
+    "cardPadding": "20px",
+    "sectionSpacing": "60px"
+  },
+  "buttons": {
+    "backgroundColor": "#00BFFF",
+    "hoverBackgroundColor": "#009ACD",
+    "textColor": "#FFFFFF",
+    "padding": "12px 24px",
+    "borderRadius": "30px",
+    "fontWeight": "600"
+  },
+  "card": {
+    "borderRadius": "12px",
+    "boxShadow": "0 0 20px rgba(0, 191, 255, 0.1)"
+  },
+  "hoverEffects": {
+    "card": {
+      "transform": "translateY(-5px)",
+      "boxShadow": "0 0 25px rgba(0, 191, 255, 0.2)",
+      "transition": "all 0.3s ease-in-out"
+    },
+    "link": {
+      "color": "#00BFFF",
+      "transition": "color 0.2s ease-in-out"
+    },
+    "navLink": {
+      "borderBottom": "2px solid #00BFFF"
+    }
+  },
+  "heroSection": {
+    "title": "Mohamed Ashraf",
+    "subtitle": "Leader in Container Transport and Sea Freight",
+    "description": "We provide integrated, reliable shipping solutions using the latest technologies and the highest standards of quality and safety.",
+    "ctaText": "Start your journey with us",
+    "ctaIcon": "🚀"
+  },
+  "services": [
+    {
+      "title": "Sea Container Transport",
+      "number": "01",
+      "description": "Safe and efficient sea freight shipping services using global shipping lines with guaranteed delivery."
+    },
+    {
+      "title": "Express Air Freight",
+      "number": "02",
+      "description": "Fast air cargo services for urgent and sensitive goods, in partnership with top global airlines."
+    },
+    {
+      "title": "Customs Clearance",
+      "number": "03",
+      "description": "Professional customs clearance services to ensure smooth and fast cargo processing at borders."
+    },
+    {
+      "title": "Storage and Distribution",
+      "number": "04",
+      "description": "Modern storage facilities and smart distribution services with high transparency and efficiency."
+    }
+  ],
+  "features": [
+    "Global Network",
+    "Fast Execution",
+    "Secure and Reliable",
+    "Premium Support",
+    "Advanced Technologies",
+    "Competitive Prices"
+  ],
+  "navbar": ["Home", "Login", "Features", "Services", "About Us", "Contact"]
+}

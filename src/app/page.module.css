@@ -6,14 +6,11 @@
   --button-primary-hover: #383838;
   --button-secondary-hover: #f2f2f2;
 
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  align-items: center;
-  justify-items: center;
-  min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
-  font-family: var(--font-geist-sans);
+  min-height: 100vh;
+  background: #0a101a;
+  font-family: 'Cairo', sans-serif;
+  position: relative;
+  overflow-x: hidden;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,12 +24,145 @@
   }
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 48px;
+  height: 80px;
+  background: #111622;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #3a8dde 0%, #6a8fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.navList {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navList li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navList li a:hover {
+  color: #3a8dde;
+}
+
 .main {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 80px);
+  text-align: center;
+  position: relative;
+  z-index: 1;
 }
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.title span {
+  background: linear-gradient(90deg, #3a8dde 0%, #6a8fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #b0b8c9;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  color: #b0b8c9;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(90deg, #3a8dde 0%, #6a8fff 100%);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.8rem 2.5rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  box-shadow: 0 2px 16px 0 #3a8dde33;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.cta:hover {
+  background: linear-gradient(90deg, #6a8fff 0%, #3a8dde 100%);
+  box-shadow: 0 4px 24px 0 #3a8dde55;
+}
+
+.bgIcons {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bgIcon {
+  position: absolute;
+  opacity: 0.08;
+}
+
+.bgIcon:nth-child(1) {
+  top: 10%;
+  right: 10%;
+}
+.bgIcon:nth-child(2) {
+  top: 60%;
+  left: 15%;
+}
+.bgIcon:nth-child(3) {
+  bottom: 15%;
+  right: 25%;
+}
+
+/* Subtle grid background */
+.page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index: 0;
+}
+
+/* Import Cairo font */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
 
 .main ol {
   font-family: var(--font-geist-mono);
@@ -68,10 +198,7 @@
   padding: 0 20px;
   border: none;
   border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
   cursor: pointer;
   display: flex;
   align-items: center;
