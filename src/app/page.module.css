@@ -102,6 +102,8 @@
   font-size: 1.1rem;
   margin-bottom: 0;
   max-width: 600px;
+  text-align: center;
+  direction: ltr;
 }
 
 .cta {
@@ -168,20 +170,23 @@
 @keyframes floatUp {
   0% {
     transform: translateY(100%);
-    opacity: 0.13;
+    opacity: 0;
   }
   10% {
+    opacity: 0.13;
+  }
+  20% {
     opacity: 0.18;
   }
-  50% {
-    opacity: 0.15;
+  80% {
+    opacity: 0.18;
   }
   90% {
-    opacity: 0.18;
+    opacity: 0.13;
   }
   100% {
     transform: translateY(-120%);
-    opacity: 0.13;
+    opacity: 0;
   }
 }
 
